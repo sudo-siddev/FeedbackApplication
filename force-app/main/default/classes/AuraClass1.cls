@@ -33,11 +33,7 @@ public with sharing class AuraClass1 {
         return [SELECT Name, (SELECT LastName FROM Contacts) FROM Account WHERE Id =: accId WITH SECURITY_ENFORCED];
     }
 
-    /**
-    * @description Method for getting contact's Last Name by Id
-    * @param String name
-    * @return List<Account>
-    */       
+       
     @auraEnabled
     public static List<Account> getCases(String name) {
         return [SELECT Name, (SELECT CaseNumber FROM Cases) FROM Account WHERE Name =: name WITH SECURITY_ENFORCED];
