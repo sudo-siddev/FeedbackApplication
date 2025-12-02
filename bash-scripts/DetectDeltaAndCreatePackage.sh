@@ -9,9 +9,9 @@ then
     git checkout ${BRANCH}
 fi
 
-mkdir changed-sources 
+mkdir changed-src 
 
-sf sgd:source:delta --source force-app/main/default --to "HEAD" --from "HEAD^" --output changed-sources/ --generate-delta
+sf sgd:source:delta --source force-app/main/default --to "HEAD" --from "HEAD^" --output changed-src/ --generate-delta
 
 #Check if changed-sources contain salesforce changes
 if [[ -d changed-sources/force-app/main/default ]]
