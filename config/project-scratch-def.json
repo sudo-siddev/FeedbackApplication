@@ -1,13 +1,13 @@
 {
-  "orgName": "xyz",
-  "edition": "Dev",
+  "orgName": "abc",
+  "edition": "Developer",
   "features": ["EnableSetPasswordInApi"],
   "settings": {
     "lightningExperienceSettings": {
-      "enableS1DesktopEnabled": true
+      "enableS1DesktopEnabled": false
     },
     "mobileSettings": {
-      "enableS1EncryptedStoragePref2": false
+      "enableS1EncryptedStoragePref2": true
     }
   }
 }
