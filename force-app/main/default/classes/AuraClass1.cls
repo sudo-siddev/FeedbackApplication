@@ -23,15 +23,7 @@ public with sharing class AuraClass1 {
         return [SELECT Name FROM Account WITH SECURITY_ENFORCED LIMIT 10];
     }
     
-    /**
-    * @description Method for getting account and its related contacts by Id
-    * @param Id accId
-    * @return List<Account>
-    */       
-    @AuraEnabled
-    public static List<Account> getContacts(ID accId) {
-        return [SELECT Name, (SELECT LastName FROM Contacts) FROM Account WHERE Id =: accId WITH SECURITY_ENFORCED];
-    }
+   
 
        
     @auraEnabled
