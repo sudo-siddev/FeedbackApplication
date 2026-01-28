@@ -23,12 +23,5 @@ public with sharing class AuraClass1 {
         return [SELECT Name FROM Account WITH SECURITY_ENFORCED LIMIT 10];
     }
     
-   
-
-       
-    @auraEnabled
-    public static List<Account> getCases(String name) {
-        return [SELECT Name, (SELECT CaseNumber FROM Cases) FROM Account WHERE Name =: name WITH SECURITY_ENFORCED];
-    }    
     
 }
